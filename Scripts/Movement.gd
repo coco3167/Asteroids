@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var acceleration = 1
-
-@export var rotationAcceleration = 1
+@export_category("Accelerations")
+@export_range(0,10) var acceleration : int = 1
+@export_range(0,2) var rotationAcceleration: float = 1
 
 
 

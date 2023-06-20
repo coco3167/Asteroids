@@ -6,3 +6,5 @@
 
 [node name="Player" parent="." instance=ExtResource("1_2fic4")]
 position = Vector2(608, 320)
+acceleration = 2
+rotationAcceleration = 1.5

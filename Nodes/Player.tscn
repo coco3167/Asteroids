@@ -3,19 +3,15 @@
 [ext_resource type="Script" path="res://Scripts/Movement.gd" id="1_fg7wh"]
 [ext_resource type="Texture2D" uid="uid://cibr2cpydar7t" path="res://icon.svg" id="2_hueji"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilg0r"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwbon"]
 size = Vector2(128, 128)
 
-[node name="Node2D" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_fg7wh")
-acceleration = 2
-rotationAcceleration = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
 texture = ExtResource("2_hueji")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_ilg0r")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cwbon")
