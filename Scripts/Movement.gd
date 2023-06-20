@@ -1,10 +1,8 @@
-extends Node2D
+extends CharacterBody2D
 
 @export var acceleration = 1
-var _speed = 0
 
 @export var rotationAcceleration = 1
-var _rotation = 0
 
 
 
@@ -14,17 +12,14 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	HandleSpeed()
-	HandleRotation()	
-	print(str(_speed) + " " + str(_rotation))
+func _physics_process(delta):
+	HandleRotation(delta)
+	HandleSpeed(delta)
+	print(str(velocity) + " " + str(rotation))
+	move_and_slide()
 
-func HandleSpeed():
-	_speed += acceleration * ((int)(Input.is_action_pressed("ui_up")) - (int)(Input.is_action_pressed("ui_down")))
-	_speed = max(0, _speed)
+func HandleSpeed(delta):
+	velocity += int(Input.is_action_pressed("up")) * acceleration * transform.x
 	
-func HandleRotation():
-	_rotation += rotationAcceleration * ((int)(Input.is_action_pressed("ui_right")) - (int)(Input.is_action_pressed("ui_left")))
-	#Handle overflow
-	_rotation = max(-180, _rotation)
-	_rotation = min(180, _rotation)
+func HandleRotation(delta):
+	rotation += (Input.get_axis("left", "right")) * rotationAcceleration * delta

@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://4u2d2j2qgc37"]
+[gd_scene load_steps=4 format=3 uid="uid://4u2d2j2qgc37"]
 
 [ext_resource type="Script" path="res://Scripts/Movement.gd" id="1_fg7wh"]
 [ext_resource type="Texture2D" uid="uid://cibr2cpydar7t" path="res://icon.svg" id="2_hueji"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_fg7wh")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilg0r"]
+size = Vector2(128, 128)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_fg7wh")
+acceleration = 2
+rotationAcceleration = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+rotation = 1.5708
 texture = ExtResource("2_hueji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_ilg0r")
