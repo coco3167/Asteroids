@@ -1,17 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://4u2d2j2qgc37"]
 
 [ext_resource type="Script" path="res://Scripts/Movement.gd" id="1_fg7wh"]
-[ext_resource type="Texture2D" uid="uid://cibr2cpydar7t" path="res://icon.svg" id="2_hueji"]
+[ext_resource type="Texture2D" uid="uid://clf3gfs7kw6ox" path="res://Sprites/StarShip.png" id="2_vxsno"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwbon"]
-size = Vector2(128, 128)
+size = Vector2(80, 64)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_fg7wh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 rotation = 1.5708
-texture = ExtResource("2_hueji")
+scale = Vector2(10, 10)
+texture = ExtResource("2_vxsno")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cwbon")
