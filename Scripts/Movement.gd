@@ -12,7 +12,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _process(delta):
+func _process(_delta):
 	#Emits particles only if accelerating
 	particles.emitting = Input.is_action_pressed("up")
 	
