@@ -11,6 +11,3 @@ func init(_position, _rotation):
 func _physics_process(_delta):
 	if(position.x < 0 or position.x > screenSize.x or position.y < 0 or position.y > screenSize.y):
 		queue_free()
-
-func _on_body_entered(body):
-	queue_free()

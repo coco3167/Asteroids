@@ -20,6 +20,5 @@ func _integrate_forces(state):
 func _on_body_entered(body):
 	#Replace by creating other asteroids if bigger
 	if(body.name.contains("Laser")):
+		body.queue_free()
 		queue_free()
-	else:
-		print(body.name)

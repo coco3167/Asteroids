@@ -18,6 +18,7 @@ func _integrate_forces(state):
 	HandleRotation()
 	HandleSpeed()
 	ScreenWarp(state)
+	
 
 func HandleRotation():
 	apply_torque_impulse(Input.get_axis("left", "right") * rotationAcceleration * 5)
