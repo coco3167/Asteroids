@@ -6,7 +6,7 @@
 [node name="MainScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_38ffe")]
-position = Vector2(128, 128)
+position = Vector2(180, 180)
 acceleration = 2
 
 [node name="GameManager" parent="." instance=ExtResource("2_7c3y1")]
