@@ -1,44 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://4u2d2j2qgc37"]
+[gd_scene load_steps=4 format=3 uid="uid://4u2d2j2qgc37"]
 
-[ext_resource type="Script" path="res://Scripts/Movement.gd" id="1_fg7wh"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_qv7pm"]
 [ext_resource type="Texture2D" uid="uid://clf3gfs7kw6ox" path="res://Sprites/StarShip.png" id="2_vxsno"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwbon"]
-size = Vector2(80, 64)
+size = Vector2(8, 7)
 
-[sub_resource type="Gradient" id="Gradient_2eq4q"]
-colors = PackedColorArray(0, 100, 0, 0.8, 0, 1, 0, 0.196078)
-
-[node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_fg7wh")
+[node name="Player" type="RigidBody2D"]
+collision_mask = 2
+mass = 10.0
+gravity_scale = 0.0
+continuous_cd = 1
+can_sleep = false
+linear_damp_mode = 1
+angular_damp_mode = 1
+angular_damp = 5.0
+script = ExtResource("1_qv7pm")
+acceleration = 10000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 100, 0, 1)
 texture_filter = 1
 rotation = 1.5708
-scale = Vector2(10, 10)
 texture = ExtResource("2_vxsno")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cwbon")
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(-24, 0)
-emitting = false
-amount = 50
-explosiveness = 0.1
-randomness = 1.0
-emission_shape = 3
-emission_rect_extents = Vector2(5, 3)
-direction = Vector2(-1, 0)
-spread = 10.0
-gravity = Vector2(0, 0)
-initial_velocity_min = 30.0
-initial_velocity_max = 30.0
-angular_velocity_min = 10.0
-angular_velocity_max = 10.0
-linear_accel_min = 50.0
-linear_accel_max = 50.0
-scale_amount_min = 2.0
-scale_amount_max = 2.0
-color_ramp = SubResource("Gradient_2eq4q")
