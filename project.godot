@@ -13,7 +13,7 @@ config_version=5
 config/name="Asteroids"
 run/main_scene="res://Nodes/StartScene.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://Sprites/StarShip.png"
+config/icon="res://CoverImage.png"
 
 [display]
 
