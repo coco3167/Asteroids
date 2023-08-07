@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6l68urs7i1d8"]
+[gd_scene load_steps=4 format=3 uid="uid://b6l68urs7i1d8"]
 
 [ext_resource type="Texture2D" uid="uid://dhl62602lasyx" path="res://Sprites/AsteroidPetit.png" id="1_bu7ae"]
 [ext_resource type="Script" path="res://Scripts/Asteroid.gd" id="1_tpp0t"]
+[ext_resource type="PackedScene" uid="uid://r7xaffj3efvf" path="res://Nodes/Explosion.tscn" id="3_2fxj6"]
 
 [node name="Asteroid" type="RigidBody2D"]
+disable_mode = 1
 collision_layer = 2
 collision_mask = 7
 mass = 100.0
@@ -16,6 +18,7 @@ linear_damp_mode = 1
 angular_damp_mode = 1
 constant_torque = 10.0
 script = ExtResource("1_tpp0t")
+minMax = Vector2(50, 100)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 1, 0, 1)
@@ -25,4 +28,7 @@ texture = ExtResource("1_bu7ae")
 [node name="CollisionShape2DPetit" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-2, 4, 1, 4, 4, 1, 4, -1, 1, -4, 0, -4, -4, 0, -4, 2)
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Explosion" parent="." instance=ExtResource("3_2fxj6")]
+visible = false
+
+[connection signal="animation_finished" from="Explosion" to="." method="_on_explosion_animation_finished"]

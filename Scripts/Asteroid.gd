@@ -15,10 +15,17 @@ func _ready():
 func _integrate_forces(state):
 	state.transform.origin.x = wrapf(position.x, 0, screenSize.x)
 	state.transform.origin.y = wrapf(position.y, 0, screenSize.y)
-
-
-func _on_body_entered(body):
-	#Replace by creating other asteroids if bigger
-	if(body.name.contains("Laser")):
-		body.queue_free()
-		queue_free()
+	
+func explode():
+	freeze = true
+	linear_velocity = Vector2.ZERO
+	angular_velocity = 0
+	$Sprite2D.visible = false
+	
+	var explosion : AnimatedSprite2D = $Explosion
+	explosion.visible = true
+	explosion.play("default")
+	
+	
+func _on_explosion_animation_finished():
+	queue_free()

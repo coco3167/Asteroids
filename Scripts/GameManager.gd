@@ -18,7 +18,7 @@ func _ready():
 func compareAsteroid(body):
 	var lambda = func(x): return x.name.match(body.name)
 	if(get_children().any(lambda)):
-		get_tree().change_scene_to_file("res://Nodes/EndScene.tscn")
+		get_tree().change_scene_to_file("res://Nodes/Main Scenes/EndScene.tscn")
 	
 	
 func _on_timer_timeout():

@@ -4,13 +4,13 @@ extends RigidBody2D
 @export_range(0,10) var acceleration : int = 5
 @export_range(0,10) var rotationAcceleration: int = 5
 
-var Laser = preload("res://Nodes/Laser.tscn")
+var Laser = preload("res://Nodes/Player/Laser.tscn")
 
 @onready var screenSize : Vector2 = get_viewport_rect().size
 
 func _process(_delta):
 	if(Input.is_action_just_pressed("fire")):
-		var laser : RigidBody2D = Laser.instantiate()
+		var laser : Area2D = Laser.instantiate()
 		laser.init(position, rotation)
 		add_sibling(laser)
 

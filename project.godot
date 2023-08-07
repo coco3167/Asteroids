@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Asteroids"
-run/main_scene="res://Nodes/StartScene.tscn"
+run/main_scene="res://Nodes/Main Scenes/StartScene.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://CoverImage.png"
 
