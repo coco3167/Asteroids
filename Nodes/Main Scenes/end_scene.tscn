@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cc47w05g3dknw"]
 
-[ext_resource type="Script" path="res://Scripts/EndScene.gd" id="1_ne54h"]
-[ext_resource type="LabelSettings" uid="uid://ctlgnf8cdxjem" path="res://Settings/Title.tres" id="1_ya10o"]
+[ext_resource type="Script" path="res://Scripts/end_scene.gd" id="1_ne54h"]
+[ext_resource type="LabelSettings" uid="uid://ctlgnf8cdxjem" path="res://Settings/title.tres" id="1_ya10o"]
 
 [node name="EndScene" type="CanvasLayer"]
 script = ExtResource("1_ne54h")

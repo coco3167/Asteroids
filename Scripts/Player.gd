@@ -4,7 +4,7 @@ extends RigidBody2D
 @export_range(0,10) var acceleration : int = 5
 @export_range(0,10) var rotationAcceleration: int = 5
 
-var Laser = preload("res://Nodes/Player/Laser.tscn")
+var Laser = preload("res://Nodes/Player/laser.tscn")
 
 @onready var screenSize : Vector2 = get_viewport_rect().size
 

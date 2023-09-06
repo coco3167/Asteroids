@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clf3gfs7kw6ox"
-path="res://.godot/imported/StarShip.png-f926c50d0a28e1f111063f769b74950a.ctex"
+path="res://.godot/imported/starship.png-de4a464fb5ce35f5b4cd51b6d039f601.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/StarShip.png"
-dest_files=["res://.godot/imported/StarShip.png-f926c50d0a28e1f111063f769b74950a.ctex"]
+source_file="res://Sprites/starship.png"
+dest_files=["res://.godot/imported/starship.png-de4a464fb5ce35f5b4cd51b6d039f601.ctex"]
 
 [params]
 

@@ -1,8 +1,12 @@
 extends RigidBody2D
+class_name Asteroid
 
 @export var minMax : Vector2 = Vector2(0,100)
+@export_enum("Small", "Medium", "Big") var size : int
 
 @onready var screenSize : Vector2 = get_viewport_rect().size
+
+var exploded : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,9 +21,13 @@ func _integrate_forces(state):
 	state.transform.origin.y = wrapf(position.y, 0, screenSize.y)
 	
 func explode():
-	freeze = true
-	linear_velocity = Vector2.ZERO
-	angular_velocity = 0
+	if(exploded):
+		return
+	
+	#freeze = true
+	#linear_velocity = Vector2.ZERO
+	#angular_velocity = 0
+	exploded = true
 	$Sprite2D.visible = false
 	
 	var explosion : AnimatedSprite2D = $Explosion

@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxjx6mpj0ntwd"]
 
-[ext_resource type="Script" path="res://Scripts/Start_scene.gd" id="1_mlpgi"]
+[ext_resource type="Script" path="res://Scripts/start_scene.gd" id="1_kc8ti"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m7ya5"]
 font_size = 48
 font_color = Color(0, 1, 0, 1)
 
 [node name="StartScene" type="CanvasLayer"]
-script = ExtResource("1_mlpgi")
+script = ExtResource("1_kc8ti")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = -1

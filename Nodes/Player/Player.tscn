@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://4u2d2j2qgc37"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_qv7pm"]
-[ext_resource type="Texture2D" uid="uid://clf3gfs7kw6ox" path="res://Sprites/StarShip.png" id="2_vxsno"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_qv7pm"]
+[ext_resource type="Texture2D" uid="uid://clf3gfs7kw6ox" path="res://Sprites/starship.png" id="2_vxsno"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwbon"]
 size = Vector2(8, 7)

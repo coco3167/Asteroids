@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dug4b5citpyd2"]
 
-[ext_resource type="Script" path="res://Scripts/Laser.gd" id="1_qahxb"]
-[ext_resource type="Texture2D" uid="uid://clf3gfs7kw6ox" path="res://Sprites/StarShip.png" id="2_kuldn"]
+[ext_resource type="Script" path="res://Scripts/laser.gd" id="1_t86j8"]
+[ext_resource type="Texture2D" uid="uid://clf3gfs7kw6ox" path="res://Sprites/starship.png" id="2_qd7b3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkcda"]
 size = Vector2(5, 2)
@@ -9,14 +9,14 @@ size = Vector2(5, 2)
 [node name="Laser" type="Area2D"]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_qahxb")
+script = ExtResource("1_t86j8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 1, 0, 1)
 texture_filter = 1
 position = Vector2(2.5, 0)
 scale = Vector2(5, 1)
-texture = ExtResource("2_kuldn")
+texture = ExtResource("2_qd7b3")
 region_enabled = true
 region_rect = Rect2(2, 1, 1, 2)
 
