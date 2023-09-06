@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cq3tag06reo0l"]
 
 [ext_resource type="Script" path="res://Scripts/asteroid.gd" id="1_qnjax"]
-[ext_resource type="Texture2D" uid="uid://dhl62602lasyx" path="res://Sprites/asteroid_petit.png" id="2_llq2p"]
-[ext_resource type="PackedScene" uid="uid://r7xaffj3efvf" path="res://Nodes/Explosion.tscn" id="3_vwsc7"]
+[ext_resource type="Texture2D" uid="uid://csit2icunpapv" path="res://Sprites/medium_asteroid.png.png" id="2_xj6v7"]
+[ext_resource type="PackedScene" uid="uid://r7xaffj3efvf" path="res://Nodes/explosion.tscn" id="3_vwsc7"]
 
 [node name="Asteroid" type="RigidBody2D"]
 disable_mode = 1
@@ -21,12 +21,12 @@ script = ExtResource("1_qnjax")
 size = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0, 1, 0, 1)
 texture_filter = 1
-texture = ExtResource("2_llq2p")
+texture = ExtResource("2_xj6v7")
 
 [node name="CollisionShape2DPetit" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-2, 4, 1, 4, 4, 1, 4, -1, 1, -4, 0, -4, -4, 0, -4, 2)
+polygon = PackedVector2Array(-6, 5, -3, 6, -2, 7, 3, 7, 4, 5, 7, 2, 7, -4, 6, -6, 4, -7, -6, -7, -7, -3, -7, 1)
 
 [node name="Explosion" parent="." instance=ExtResource("3_vwsc7")]
 visible = false

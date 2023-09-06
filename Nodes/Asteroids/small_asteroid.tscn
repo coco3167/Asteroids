@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/asteroid.gd" id="1_e6q0b"]
 [ext_resource type="Texture2D" uid="uid://dhl62602lasyx" path="res://Sprites/asteroid_petit.png" id="2_8dniq"]
-[ext_resource type="PackedScene" uid="uid://r7xaffj3efvf" path="res://Nodes/Explosion.tscn" id="3_g3qjd"]
+[ext_resource type="PackedScene" uid="uid://r7xaffj3efvf" path="res://Nodes/explosion.tscn" id="3_g3qjd"]
 
 [node name="Asteroid" type="RigidBody2D"]
 disable_mode = 1
