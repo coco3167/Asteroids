@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc47w05g3dknw"]
+[gd_scene load_steps=4 format=3 uid="uid://cc47w05g3dknw"]
 
 [ext_resource type="Script" path="res://Scripts/end_scene.gd" id="1_ne54h"]
 [ext_resource type="LabelSettings" uid="uid://ctlgnf8cdxjem" path="res://Settings/title.tres" id="1_ya10o"]
+[ext_resource type="LabelSettings" uid="uid://dfvtfak30kedq" path="res://Settings/normal.tres" id="3_t6jwb"]
 
 [node name="EndScene" type="CanvasLayer"]
 script = ExtResource("1_ne54h")
@@ -13,6 +14,28 @@ anchor_bottom = 0.3
 grow_horizontal = 2
 text = "GAME END"
 label_settings = ExtResource("1_ya10o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScore" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.3
+grow_horizontal = 2
+text = "High Score : 0"
+label_settings = ExtResource("3_t6jwb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+text = "Score : 0"
+label_settings = ExtResource("3_t6jwb")
 horizontal_alignment = 1
 vertical_alignment = 1
 
